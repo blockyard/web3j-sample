@@ -25,7 +25,7 @@ public class SignTextTest {
 		Credentials cred = Credentials.create(privateKey);
 		ECKeyPair ecKey = cred.getEcKeyPair();
 		
-		SignatureData signedData = Sign.signMessage(rawMsg.getBytes(), ecKey);
+		//SignatureData signedData = Sign.signMessage(rawMsg.getBytes(), ecKey);
 		
 		byte[] r = signedData.getR();
 		Assert.assertEquals(32, r.length);
