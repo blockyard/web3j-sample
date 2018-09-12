@@ -27,16 +27,18 @@ public class EthMnemonic {
 	 */
 	private static String ETH_TYPE = "m/44'/60'/0'/0/0";
 
+	//饿 溪 弹 托 侧 者 江 获 绳 休 东 碎
 	private static SecureRandom secureRandom = new SecureRandom();
 
 	public static void main(String[] args) {
 		//生成助记词
-		generateMnemonic(ETH_TYPE, "11111111");
+		//generateMnemonic(ETH_TYPE, "11111111");
 
 
 		//导入助记词
 		//[team, bid, property, oval, hedgehog, observe, badge, cabin, color, cruel, casino, blame]
 		List<String> list = new ArrayList<>();
+		
 		list.add("team");
 		list.add("bid");
 		list.add("property");
@@ -49,7 +51,12 @@ public class EthMnemonic {
 		list.add("cruel");
 		list.add("casino");
 		list.add("blame");
-//		importMnemonic(ETH_TYPE, list, "11111111");
+		
+		
+		
+		
+		EthHDWallet wallet = importMnemonic(ETH_TYPE, list, "11111111");
+		System.out.println("xxx");
 	}
 
 	public static EthHDWallet generateMnemonic(String path, String password) {
